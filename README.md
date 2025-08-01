@@ -5,8 +5,7 @@ class Node:
         self.next = None
 class Playlist:
     def __init__(self):
-        self.head = None
-
+        self.head = None   
     def insert_beginning(self, song):
         new_node = Node(song)
         new_node.next = self.head
@@ -43,8 +42,7 @@ class Playlist:
     def delete_song(self, song):
         curr = self.head
         prev = None
-
-        while curr:
+  while curr:
             if curr.data == song:
                 if prev is None:
                     self.head = curr.next
@@ -87,7 +85,6 @@ while True:
     print("5. Find song")
     print("6. Display playlist")
     print("7. Exit")
-
     try:
         choice = int(input("Enter your choice: "))
     except ValueError:
